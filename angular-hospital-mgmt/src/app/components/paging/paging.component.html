@@ -1,0 +1,28 @@
+<div class="main-paging">
+    <div>&nbsp;
+        <button (click)="onFirstPage()" [disabled]="isFirstPageDisabled" mat-mini-fab color="primary">
+            <mat-icon>first_page</mat-icon>
+          </button>&nbsp;
+       
+    </div>
+    <div>
+        <button (click)="onPreviousPage()" [disabled]="isPreviousPageDisabled" mat-mini-fab color="primary">
+            <mat-icon>keyboard_arrow_left</mat-icon>
+          </button>&nbsp;
+    </div>
+    <div>&nbsp;{{currentPage}}&nbsp;</div>
+    <div>&nbsp;of&nbsp;</div>
+    <div>&nbsp;{{totalPages}}&nbsp;</div>
+    <div>
+        &nbsp;
+        <button (click)="onNextPage()" [disabled]="isNextPageDisabled || currentPage === totalPages" mat-mini-fab color="primary">
+            <mat-icon>keyboard_arrow_right</mat-icon>
+          </button>&nbsp;
+    </div>
+    <div>&nbsp;
+        <button (click)="onLastPage()" [disabled]="isLastPageDisabled || currentPage === totalPages" mat-mini-fab color="primary">
+            <mat-icon>last_page</mat-icon>
+          </button>
+       
+    </div>
+</div>

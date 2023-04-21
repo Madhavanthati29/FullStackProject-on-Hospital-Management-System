@@ -1,0 +1,19 @@
+table tr td img{
+    height:200px;
+    width:200px;
+
+}
+.centered {
+    display: flex;
+    justify-content: center;
+}
+
+
+// new
+
+.background-image {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}

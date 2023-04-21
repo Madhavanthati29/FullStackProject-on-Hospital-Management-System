@@ -1,0 +1,50 @@
+<br /><br />
+<div class="payment-tab">
+  <div class="main centered">
+    <h1>Payment</h1>
+  </div>
+  <br />
+  <div class="main centered">
+    <div>
+      <table>
+        <tr>
+          <td>TotalPayment</td>
+          <td><input type="text" [(ngModel)]="totalPayment" /></td>
+        </tr>
+        <tr>
+          <td class="label">Admit Date</td>
+          <td>
+            <mat-form-field>
+              <input matInput [matDatepicker]="picker" placeholder="Choose a date" (dateChange)="setAdmitDate($event)">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </td>
+        </tr>
+  
+        <tr>
+          <td>NameOnCard</td>
+          <td><input type="text" [(ngModel)]="nameOnCard" /></td>
+        </tr>
+        <tr>
+          <td>CardNumber</td>
+          <td><input type="text" [(ngModel)]="cardNumber" /></td>
+        </tr>
+        <tr>
+          <td>Expyear</td>
+          <td><input type="text" [(ngModel)]="expYear" /></td>
+        </tr>
+        <tr>
+          <td>CVV</td>
+          <td><input type="text" [(ngModel)]="cvv" /></td>
+        </tr>
+  
+      </table>
+    </div>
+    
+  </div>
+  <br />
+  <div class="centered">
+    <button (click)="onPayment()" mat-raised-button color="primary">Submit</button>
+  </div>
+</div>

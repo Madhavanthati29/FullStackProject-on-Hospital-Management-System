@@ -1,0 +1,137 @@
+<!-- <br /><br />
+<div class="main client-login">
+    <h1>DoctorSignIn</h1>
+    <br />
+
+    <form [formGroup]="doctorLoginForm">
+        <div class="item-icon">
+            <div class="icon">
+            </div>
+            <input type="text" id="email" formControlName="email" placeholder="Email">
+        </div>
+        <div *ngIf="doctorLoginForm.controls['email'].invalid && (doctorLoginForm.controls['email'].dirty || doctorLoginForm.controls['email'].touched)"
+            class="error-message">
+            <div *ngIf="doctorLoginForm.controls['email'].errors?.['required']">
+                Email should not blank
+            </div>
+            <div *ngIf="doctorLoginForm.controls['email'].errors?.['pattern']">
+                Enter Valid email
+            </div>
+        </div>
+
+
+        <br />
+        <div class="item-icon">
+            <div class="icon">
+            </div><input type="password" formControlName="password" placeholder="Password">
+        </div> -->
+        <!-- Password Validation code -->
+        <!-- <div *ngIf="doctorLoginForm.controls['password'].invalid && (doctorLoginForm.controls['password'].dirty || doctorLoginForm.controls['password'].touched)"
+            class="error-message">
+            <div *ngIf="doctorLoginForm.controls['password'].errors?.['required']">
+                Password should not blank
+            </div> -->
+            <!-- <div *ngIf="clientLoginForm.controls['password'].errors?.['maxlength']">
+                Maximum 8 character required
+            </div> -->
+            <!-- <div *ngIf="doctorLoginForm.controls['password'].errors?.['minlength']">
+                Minium 8 character required
+            </div>
+        </div> -->
+        <!--End of Password Validation -->
+        <!-- <br />
+
+        <div>
+            <button (click)="signIn()" mat-raised-button color="primary" [disabled]="!doctorLoginForm.controls['password'].valid || !doctorLoginForm.controls['email'].valid">SignIn</button>
+        </div>
+    </form>
+    <br>
+    <div class="new-user-register">
+        Don`t have an account yet? <span class="sign-up" (click)="routeToNewUser()">Sign up Now</span>
+    </div>
+    <br />
+    <div class="sign-up" (click)="routeToForgotPassword()">
+        forgot password ?
+    </div>
+    <br /> -->
+
+    <!-- login form with design -->
+
+    <!-- Section: Design Block -->
+<section class=" text-center text-lg-start">
+    <div class="card mb-3">
+      <div class="row g-0 d-flex align-items-center">
+        <div class="col-lg-4 d-none d-lg-flex">
+          <img src="assets/images/doctor.jpg" alt="Trendy Pants and Shoes"
+            class="w-100 rounded-t-5 rounded-tr-lg-0 rounded-bl-lg-5" />
+        </div>
+        <div class="col-lg-8">
+            <div class="card-body py-5 px-md-5">
+                <form [formGroup]="doctorLoginForm">
+                <h1>DoctorSignIn</h1>
+                <br>
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <input type="email" id="email" formControlName="email" class="form-control" />
+                <label class="form-label" for="email">Email address</label>
+              </div>
+              
+              <div *ngIf="doctorLoginForm.controls['email'].invalid && (doctorLoginForm.controls['email'].dirty || doctorLoginForm.controls['email'].touched)"
+              class="error-message">
+              <div *ngIf="doctorLoginForm.controls['email'].errors?.['required']">
+                  Email should not blank
+              </div>
+              <div *ngIf="doctorLoginForm.controls['email'].errors?.['pattern']">
+                  Enter Valid email
+              </div>
+             </div>
+
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <input type="password" formControlName="password" class="form-control" />
+                <label class="form-label" for="password">Password</label>
+              </div>
+              
+              <div *ngIf="doctorLoginForm.controls['password'].invalid && (doctorLoginForm.controls['password'].dirty || doctorLoginForm.controls['password'].touched)"
+              class="error-message">
+              <div *ngIf="doctorLoginForm.controls['password'].errors?.['required']">
+                  Password should not blank
+              </div>
+              <!-- <div *ngIf="clientLoginForm.controls['password'].errors?.['maxlength']">
+                  Maximum 8 character required
+              </div> -->
+              <div *ngIf="doctorLoginForm.controls['password'].errors?.['minlength']">
+                  Minium 8 character required
+              </div>
+                </div>
+
+                <div class="new-user-register">
+                    Don`t have an account yet? <span class="sign-up" (click)="routeToNewUser()">Sign up Now</span>
+                </div>
+                <br />
+                <div class="sign-up" (click)="routeToForgotPassword()">
+                    forgot password ?
+                </div>
+              <!-- 2 column grid layout for inline styling -->
+              <!-- <div class="row mb-4">
+                <div class="col"> -->
+                  <!-- Simple link -->
+                  <!-- <a href="#!" class="sign-up" (click)="routeToForgotPassword()">Forgot password?</a>
+                </div>
+              </div> -->
+              
+              <!-- <div class="new-user-register">
+                  Don`t have an account yet? <span class="sign-up" (click)="routeToNewUser()">Sign up Now</span>
+              </div> -->
+              <!-- Submit button -->
+              <button type="button" (click)="signIn()" class="btn btn-primary btn-block mb-4" [disabled]="!doctorLoginForm.controls['password'].valid || !doctorLoginForm.controls['email'].valid">Sign in</button>
+  
+            </form>
+
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Design Block -->

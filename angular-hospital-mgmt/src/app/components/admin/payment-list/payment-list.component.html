@@ -1,0 +1,31 @@
+<br /><br />
+<div class="register-tab">
+    <div class="main centered">
+        <h1>Payments</h1>
+    </div>
+    <div class="main centered">
+        <div *ngIf="payments.length === 0">
+            No Appointment currently in your List.
+        </div>
+        <div *ngIf="payments.length > 0">
+            <table border="1">
+                <tr>
+                    <th>
+                        Payment Id
+                    </th>
+                    <th>
+                        Total Amount
+                    </th>
+                    <th>
+                        Payment Status
+                    </th>
+                </tr>
+              <tr *ngFor="let pay of payments">
+                  <td>{{pay?.paymentId}}</td>
+                  <td>{{pay?.totalPayment}}</td>
+                  <td>{{pay?.paymentStatus}}</td>
+              </tr>
+            </table>
+        </div>
+    </div>
+</div>

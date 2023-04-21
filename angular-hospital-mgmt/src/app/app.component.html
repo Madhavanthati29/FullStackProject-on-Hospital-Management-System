@@ -1,0 +1,5 @@
+<app-app-header *ngIf="!isLoggedIn && !isAdminLoggedIn && !isDoctorLoggedIn"></app-app-header>
+<app-client-header *ngIf="isLoggedIn && !isAdminLoggedIn && !isDoctorLoggedIn"></app-client-header>
+<app-admin-header *ngIf="!isLoggedIn && isAdminLoggedIn && !isDoctorLoggedIn"></app-admin-header>
+<app-doctor-app-header *ngIf="!isLoggedIn && !isAdminLoggedIn && isDoctorLoggedIn"></app-doctor-app-header>
+<router-outlet></router-outlet>

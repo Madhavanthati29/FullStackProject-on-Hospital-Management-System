@@ -1,0 +1,15 @@
+<div class="HMSName">
+    <marquee direction="right" scrollamount="10">
+        <h1>REMIDY HOSPITALS</h1>
+    </marquee>
+</div>
+<div class="main">
+    <div><img  src="../../../assets/images/hospital.png" width="10%" height="90%"></div>
+    <div  (click)="gotourl('')" [class.selected]="url === '/'">Home</div>
+    <div (click)="gotourl('admin-login')" [class.selected]="url === '/admin-login'">AdminLogin</div>
+    <div (click)="gotourl('doctor-login')" [class.selected]="url === '/doctor-login'">DoctorLogin</div>
+    <div (click)="gotourl('patient-login')" [class.selected]="url === '/patient-login'">PatientLogin</div>
+    <div (click)="gotourl('about-us')" [class.selected]="url === '/about-us'">AboutUs</div>
+    <div (click)="gotourl('contact-us')" [class.selected]="url === '/contact-us'">Contactus</div>
+</div>
+

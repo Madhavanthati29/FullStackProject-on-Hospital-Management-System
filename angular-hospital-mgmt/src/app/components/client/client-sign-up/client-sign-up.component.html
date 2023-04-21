@@ -1,0 +1,211 @@
+<!-- <br /><br />
+<div class="register-tab">
+    <div class="main centered">
+        <h1>Register</h1>
+    </div>
+    <div class="main centered">
+
+        <table>
+            <tr>
+                <td class="label">FirstName</td>
+                <td>
+                    <input type="text" [(ngModel)]="firstName">
+                </td>
+            </tr>
+            <tr>
+                <td class="label">LastName</td>
+                <td>
+                    <input type="text" [(ngModel)]="lastName">
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Email</td>
+                <td>
+                    <input type="text" [(ngModel)]="email">
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Age</td>
+                <td>
+                    <input type="text" [(ngModel)]="age">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Gender</td>
+                <td>
+                    <input type="radio" name="male" value="male" [(ngModel)]="gender"> Male
+                    <input type="radio" name="female" value="female" [(ngModel)]="gender"> female
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Phone</td>
+                <td>
+                    <input type="text" [(ngModel)]="phone">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Address</td>
+                <td>
+                    <input type="text" [(ngModel)]="address">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Blood Group</td>
+                <td>
+                    <input type="text" [(ngModel)]="bloodGroup">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Medical Background</td>
+                <td>
+                    <input type="text" [(ngModel)]="medicalBackground">
+                </td>
+            </tr> -->
+
+            <!-- <tr>
+                <td class="label">state</td>
+                <td>
+                    <input type="text" [(ngModel)]="state">
+                </td>
+            </tr> -->
+            <!-- <tr>
+                <td class="label">Password</td>
+                <td>
+                    <input type="password" [(ngModel)]="password">
+                </td>
+            </tr> -->
+            <!-- <tr>
+                <td></td>
+                <td class="information">
+                    Password should contains 1 Uppercase, 1 Digit and should be 8 character long
+                </td>
+            </tr> -->
+            <!-- <tr>
+                <td class="submit">
+                    <button (click)="signup()" [disabled]="firstName === '' || lastName === '' || email === '' || password === ''" mat-raised-button color="primary">Signup</button>
+                </td>
+            </tr> -->
+        <!-- </table>
+    </div>
+    <br />
+    <div class="centered"> <button (click)="signup()" mat-raised-button color="primary">Signup</button></div>
+</div>
+<br /><br /> -->
+
+<!-- Register with design -->
+
+<section class="h-100 bg-dark">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card card-registration my-4">
+            <div class="row g-0">
+              <div class="col-xl-6 d-none d-xl-block">
+                <img src="assets/images/patient4.jpeg"
+                  alt="Sample photo" class="img-fluid"
+                  style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+              </div>
+              <div class="col-xl-6">
+                <div class="card-body p-md-5 text-black">
+                  <h3 class="mb-5 text-uppercase">Patient registration form</h3>
+  
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" [(ngModel)]="firstName" class="form-control form-control-lg" />
+                        <label class="form-label" for="firstName">First name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" [(ngModel)]="lastName" class="form-control form-control-lg" />
+                        <label class="form-label" for="lastName">Last name</label>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" [(ngModel)]="email" class="form-control form-control-lg" />
+                        <label class="form-label" for="email">Email Address</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" [(ngModel)]="age" class="form-control form-control-lg" />
+                        <label class="form-label" for="age">Age</label>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+  
+                    <h6 class="mb-0 me-4">Gender: </h6>
+  
+                    <div class="form-check form-check-inline mb-0 me-4">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" [(ngModel)]="gender"
+                        value="option1" />
+                      <label class="form-check-label" for="gender">Female</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline mb-0 me-4">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" [(ngModel)]="gender"
+                        value="option2" />
+                      <label class="form-check-label" for="gender">Male</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline mb-0">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" [(ngModel)]="gender"
+                        value="option3" />
+                      <label class="form-check-label" for="gender">Other</label>
+                    </div>
+                    
+                    </div>
+                        <div class="form-outline mb-4">
+                        <input type="text" [(ngModel)]="phone" class="form-control form-control-lg" />
+                        <label class="form-label" for="phone">Phone</label>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <input type="text" [(ngModel)]="address" class="form-control form-control-lg" />
+                        <label class="form-label" for="address">Address</label>
+                    </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="text" [(ngModel)]="bloodGroup" class="form-control form-control-lg" />
+                    <label class="form-label" for="bloodGroup">BloodGroup</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="text" [(ngModel)]="medicalBackground" class="form-control form-control-lg" />
+                    <label class="form-label" for="medicalBackground">Medical Background</label>
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                    <input type="password" [(ngModel)]="password" class="form-control form-control-lg" />
+                    <label class="form-label" for="password">Password</label>
+                  </div>
+
+                  <div class="information">
+                    Password should contains 1 Uppercase, 1 Digit and should be 8 character long
+                  </div>
+  
+                  <div class="d-flex justify-content-end pt-3">
+                    <!-- <button type="button" class="btn btn-light btn-lg">Reset all</button> -->
+                    <button (click)="signup()" (click)="signup()" [disabled]="firstName === '' || lastName === '' || email === '' || password === ''" class="btn btn-warning btn-lg ms-2">Signup</button>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

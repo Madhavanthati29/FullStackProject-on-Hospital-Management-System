@@ -1,0 +1,72 @@
+<br /><br />
+<div class="register-tab">
+    <div class="main centered">
+        <h1>Update Doctor</h1>
+    </div>
+    <div class="main centered">
+        
+        <table>
+            <tr>
+                <td class="label">FirstName</td>
+                <td>
+                    <input type="text" [(ngModel)]="firstName">
+                </td>
+            </tr>
+            <tr>
+                <td class="label">LastName</td>
+                <td>
+                    <input type="text" [(ngModel)]="lastName">
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Email</td>
+                <td>
+                    <input type="text" [(ngModel)]="email">
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Age</td>
+                <td>
+                    <input type="text" [(ngModel)]="age">
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="label">Gender</td>
+                <td>
+                    <input type="radio" name="male" value="male" [(ngModel)]="gender"> Male
+                    <input type="radio"  name="female" value="female"  [(ngModel)]="gender"> female
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="label">Phone</td>
+                <td>
+                    <input type="text" [(ngModel)]="phone">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Address</td>
+                <td>
+                    <input type="text" [(ngModel)]="address">
+                </td>
+            </tr>
+    
+            
+    
+            <tr>
+                <td class="label">Specialization</td>
+                <td>
+                    <input type="text" [(ngModel)]="specialization">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br />
+    <div class="centered"> <button (click)="onUpdate()" mat-raised-button color="primary">Update</button></div>
+    
+    
+    
+</div>
+<br /><br />

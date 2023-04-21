@@ -1,0 +1,48 @@
+<br /><br />
+<div class="register-tab">
+    <div class="main centered">
+        <h1>Create Appointment</h1>
+    </div>
+    <div class="main centered">
+
+        <table>
+            <tr>
+                <td class="label">Select Date</td>
+                <td>
+                    <mat-form-field>
+                        <input matInput [matDatepicker]="picker" placeholder="Choose a date" (dateChange)="setDOB($event)"
+                        >
+                        <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+                        <mat-datepicker #picker ></mat-datepicker>
+                      </mat-form-field>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Time</td>
+                <td>
+                    <input type="text" name="time"  [(ngModel)]="appointmentTime">
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="label">Meridiem</td>
+                <td>
+                    <input type="radio" name="am" value="am" [(ngModel)]="meridiem"> AM
+                    <input type="radio"  name="pm" value="pm"  [(ngModel)]="meridiem"> PM
+                </td>
+            </tr>
+
+            <tr>
+                <td>Select Doctor</td>
+                <td>
+                    <select [(ngModel)]="doctorId">
+                        <option *ngFor="let item of doctor" [value]="item?.doctorId">{{item?.firstName}}</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br />
+    <div class="centered"> <button (click)="createAppointment()" mat-raised-button color="primary">Create Appointment</button></div>
+</div>

@@ -1,0 +1,36 @@
+<br /><br />
+<div class="register-tab">
+    <div class="main centered">
+        <h1>Doctor List</h1>
+    </div>
+    <div class="main centered">
+        <div *ngIf="doctor.length === 0">
+            No Doctor currently in your List.
+        </div>
+        <div *ngIf="doctor.length > 0">
+            <table border="1">
+                <tr>
+                    <th>
+                        Doctor Id
+                    </th>
+                    <th>
+                        DoctorName
+                    </th>
+                    <th>
+                       Email
+                    </th>
+                    <th></th>
+                </tr>
+              <tr *ngFor="let doc of doctor">
+                  <td>{{doc?.doctorId}}</td>
+                  <td>{{doc?.firstName}} {{doc?.lastName}}</td>
+                  <td>{{doc?.doctorEmailId}}</td>
+                  <th>
+                      <button (click)="onUpdate(doc)">Edit</button>&nbsp;&nbsp;&nbsp;
+                      <button (click)="onDelete(doc)">Delete</button>
+                </th>
+              </tr>
+            </table>
+        </div>
+    </div>
+</div>

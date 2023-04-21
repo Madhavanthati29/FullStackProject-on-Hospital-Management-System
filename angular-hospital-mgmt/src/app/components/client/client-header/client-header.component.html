@@ -1,0 +1,10 @@
+<div class="main">
+    <div (click)="routerToLink('/patient/home')" [class.selected]="url === '/patient/home'">Home</div>
+    <div (click)="routerToLink('/patient/create-appointment')" [class.selected]="url === '/patient/create-appointment'">Create Appointment</div>
+    <div (click)="routerToLink('/patient/my-appointment')" [class.selected]="url === '/patient/my-appointment'">My Appointments</div>
+    <div (click)="routerToLink('/patient/my-prescription')" [class.selected]="url === '/patient/my-prescription'">My Prescription</div>
+    <div [matMenuTriggerFor]="menu" class="user-name-item"><div>{{userName}}&nbsp;</div><div><mat-icon>expand_more</mat-icon></div></div>   
+</div>
+<mat-menu #menu="matMenu">
+    <button (click)="routerToLink('/patient/logout')" mat-menu-item><mat-icon>logout</mat-icon> Logout</button>
+  </mat-menu>

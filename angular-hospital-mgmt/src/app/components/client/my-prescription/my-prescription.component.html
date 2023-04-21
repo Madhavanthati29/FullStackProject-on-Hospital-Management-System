@@ -1,0 +1,35 @@
+
+<br /><br />
+<div class="register-tab">
+    <div class="main centered">
+        <h1>My Appointments</h1>
+    </div>
+    <div class="main centered">
+        <div *ngIf="prescriptionList.length === 0">
+            No Prescription currently in your List.
+        </div>
+        <div *ngIf="prescriptionList.length > 0">
+            <table border="1">
+                <tr>
+                    <th>
+                        prescription Id
+                    </th>
+                    <th>
+                       status
+                    </th>
+                    <th>
+                        Appointment Id
+                    </th>
+                    <th></th>
+                </tr>
+              <tr *ngFor="let prs of prescriptionList">
+                  <td>{{prs?.prescriptionId}}</td>
+                  <td>{{prs?.status}}</td>
+                  <td>{{prs?.bookingAppointment?.appointmentId}}</td>
+                  <td *ngIf="!prs?.isPaid"><button (click)="addPayment(prs)">Payment</button></td>
+                  <td *ngIf="prs?.isPaid">Paid</td>
+              </tr>
+            </table>
+        </div>
+    </div>
+</div>

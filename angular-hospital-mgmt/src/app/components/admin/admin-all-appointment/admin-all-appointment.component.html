@@ -1,0 +1,33 @@
+<br /><br />
+<div class="register-tab">
+    <div class="main centered">
+        <h1>Appointments</h1>
+    </div>
+    <div class="main centered">
+        <div *ngIf="appointments.length === 0">
+            No Appointment currently in your List.
+        </div>
+        <div *ngIf="appointments.length > 0">
+            <table border="1">
+                <tr>
+                    <th>
+                        Appointment Id
+                    </th>
+                    <th>
+                        Appointment Date
+                    </th>
+                    <th>
+                        Appointment Time
+                    </th>
+                    <th>Patient Name</th>
+                </tr>
+              <tr *ngFor="let apt of appointments">
+                  <td>{{apt?.appointmentId}}</td>
+                  <td>{{apt?.appointmentDate}}</td>
+                  <td>{{apt?.appointmentTime}} {{apt?.meridiem}}</td>
+                  <td>{{apt?.patientName}}</td>
+              </tr>
+            </table>
+        </div>
+    </div>
+</div>

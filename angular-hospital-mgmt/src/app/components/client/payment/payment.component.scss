@@ -1,0 +1,21 @@
+tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0px;
+}
+.centered {
+    display: flex;
+    justify-content: center;
+}
+.information {
+    width: 400px;
+}
+.register-tab {
+    width: 40%;
+    margin: 0 auto;
+    box-shadow: rgb(109 109 125 / 28%) 0px 4px 7px 12px;
+    padding: 20px;
+}
+table tr td{
+    padding: 10px
+}

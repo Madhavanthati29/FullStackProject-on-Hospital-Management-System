@@ -1,0 +1,8 @@
+<div class="main">
+    <div (click)="routerToLink('/doctor/home')" [class.selected]="url === '/doctor/home'">Home</div>
+    <div (click)="routerToLink('/doctor/appointment')" [class.selected]="url === '/doctor/appointment'">Appointment</div>
+    <div [matMenuTriggerFor]="menu" class="user-name-item"><div>{{userName}}&nbsp;</div><div><mat-icon>expand_more</mat-icon></div></div>   
+</div>
+<mat-menu #menu="matMenu">
+    <button (click)="routerToLink('/doctor/logout')" mat-menu-item><mat-icon>logout</mat-icon> Logout</button>
+  </mat-menu>

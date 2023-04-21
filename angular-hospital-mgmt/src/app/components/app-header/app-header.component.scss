@@ -1,0 +1,44 @@
+.main
+{
+    display: flex;
+    justify-content: space-around;
+    height: 60px;
+    background-color: #02a1f0;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+.main > .selected {
+    background: rgb(0, 156, 23);
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 10px 0 10px;
+}
+.main img {
+    height: 3em;
+    width: 200px;
+}
+.main div
+{
+    cursor: pointer;
+}
+.sign-up{
+    color:blue;
+    cursor: pointer;
+}
+
+
+//new
+
+h1
+{
+    color:#a700fa;
+    padding-bottom: 0%;
+}
+
+.HMSName
+{
+    height: 3em;
+    width: 100%;
+}
